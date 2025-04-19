@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import {My0000Component} from './my0000/my0000.component';
+import { RouterModule } from '@angular/router';
+import {MainComponent} from './main/main.component';
 
 @Component({
   selector: 'app-root',
-  imports: [My0000Component],
+  imports: [RouterModule,MainComponent],  // 確保 My0000Component 正確匯入
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],  // 修正 styleUrls
+  standalone: true,
 })
 export class AppComponent {
   title = 'my-app';
