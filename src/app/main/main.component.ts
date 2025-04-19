@@ -10,6 +10,7 @@ import { mainlist } from './mainlist';
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
+
 export class MainComponent {
   protected readonly mainlist = mainlist;
 }

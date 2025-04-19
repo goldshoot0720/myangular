@@ -9,6 +9,7 @@ import {MainComponent} from './main/main.component';
   styleUrls: ['./app.component.css'],  // 修正 styleUrls
   standalone: true,
 })
+
 export class AppComponent {
   title = 'my-app';
 }
