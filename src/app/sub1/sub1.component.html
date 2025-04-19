@@ -1,2 +1,59 @@
-<div><h1>歡迎來到{{mainlist[1].alt}}</h1></div>
-<p><button routerLink="/main"><img [src]="mainlist[14].img" [alt]="mainlist[14].alt"></button></p>
+<div>
+  <h1>歡迎來到{{mainlist[1].alt}}</h1>
+  <table>
+    <tr>
+      <td><label for="subscribe">訂閱項目：</label></td>
+      <td><textarea rows="2" cols="50" [(ngModel)]="textareavalue1"></textarea></td>
+    </tr>
+    <tr>
+      <td><label for="subscribe">訂閱費用：</label></td>
+      <td><textarea rows="2" cols="50" [(ngModel)]="textareavalue2"></textarea></td>
+    </tr>
+    <tr>
+      <td><label for="subscribe">訂閱到期日：</label></td>
+      <td><textarea rows="2" cols="50" [(ngModel)]="textareavalue3"></textarea></td>
+    </tr>
+    <tr>
+      <td><label for="remark">備註：</label></td>
+      <td><textarea rows="2" cols="50" [(ngModel)]="textareavalue4"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align: center;">
+        <button id="button1" (click)="onButton1Click()">新增資料</button>
+      </td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>訂閱項目</th>
+      <th>訂閱費用</th>
+      <th>訂閱到期日</th>
+      <th>備註</th>
+    </tr>
+    <tr *ngFor="let data of sub1data">
+      <ng-container *ngIf="editTarget === data; else displayRow">
+        <td><textarea rows="2" cols="20" [(ngModel)]="data.textareavalue1"></textarea></td>
+        <td><textarea rows="2" cols="20" [(ngModel)]="data.textareavalue2"></textarea></td>
+        <td><textarea rows="2" cols="20" [(ngModel)]="data.textareavalue3"></textarea></td>
+        <td><textarea rows="2" cols="20" [(ngModel)]="data.textareavalue4"></textarea></td>
+        <td>
+          <button (click)="saveEdit(data)">儲存</button>
+          <button (click)="cancelEdit()">取消</button>
+        </td>
+      </ng-container>
+      <ng-template #displayRow>
+        <td>{{ data.textareavalue1 }}</td>
+        <td>{{ data.textareavalue2 }}</td>
+        <td>{{ data.textareavalue3 }}</td>
+        <td>{{ data.textareavalue4 }}</td>
+        <td>
+          <button (click)="editRow(data)">修改資料</button>
+          <button (click)="onButton3Click(data)">刪除資料</button>
+        </td>
+      </ng-template>
+    </tr>
+  </table>
+  <button routerLink="/main">
+    <img [src]="mainlist[14].img" [alt]="mainlist[14].alt">
+  </button>
+</div>

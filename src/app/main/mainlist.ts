@@ -74,4 +74,9 @@ export const mainlist = [
     alt: '首頁',
     img:'assets/main/myangular_home_page.png'
   },
+  {
+    id: '15',
+    alt: '登入',
+    img:'assets/main/myangular_login_page.png'
+  },
 ]
