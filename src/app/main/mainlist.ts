@@ -32,35 +32,45 @@ export const mainlist = [
   {
     id: '6',
     alt: '消費資訊管理',
-    img:'./assets/main/info_image_8.png'
+    img:'./assets/main/info_image_6.png'
   },
   {
     id: '7',
     alt: '日期時間資訊管理',
-    img:'./assets/main/info_image_9.png'
+    img:'./assets/main/info_image_7.png'
   },
   {
     id: '8',
     alt: '金融市場資訊管理',
-    img:'./assets/main/info_image_10.png'
+    img:'./assets/main/info_image_8.png'
   },
   {
     id: '9',
-    alt: '部落格資訊管理',
-    img:'./assets/main/info_image_6.png'
+    alt: '動畫追劇資訊管理',
+    img:'./assets/main/info_image_9.png'
   },
   {
     id: '10',
-    alt: '大位天定資訊管理',
-    img:'./assets/main/info_image_7.png'
+    alt: '部落格資訊管理',
+    img:'./assets/main/info_image_10.png'
   },
   {
     id: '11',
+    alt: '大位天定資訊管理',
+    img:'./assets/main/info_image_11.png'
+  },
+  {
+    id: '12',
+    alt: '保留資訊管理',
+    img:'./assets/main/info_image_12.png'
+  },
+  {
+    id: '13',
     alt: '草包鋒兄',
     img:'assets/main/TSAO_PAO_FENG_HSIUNG.png'
   },
   {
-    id: '12',
+    id: '14',
     alt: '首頁',
     img:'assets/main/myangular_home_page.png'
   },

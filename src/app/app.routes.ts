@@ -45,5 +45,13 @@ export const routes: Routes = [
     path: 'sub10',
     loadComponent: () => import('./sub10/sub10.component').then(m => m.Sub10Component)
   },
+  {
+    path: 'sub11',
+    loadComponent: () => import('./sub11/sub11.component').then(m => m.Sub11Component)
+  },
+  {
+    path: 'sub12',
+    loadComponent: () => import('./sub12/sub12.component').then(m => m.Sub12Component)
+  },
   { path: '', redirectTo: '/main', pathMatch: 'full' }  // 預設路由指向 main
 ];
