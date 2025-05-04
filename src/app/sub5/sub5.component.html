@@ -1,0 +1,16 @@
+<div><h1>歡迎來到{{mainlist[5].alt}}</h1></div>
+<mat-card *ngFor="let item of mydata" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>{{ item.hospital }}</mat-card-title>
+    <mat-card-subtitle>{{ item.doctor }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions>
+    {{ item.prescription1 }}，{{ item.prescription2 }}，{{ item.prescription3 }}
+  </mat-card-actions>
+</mat-card>
+
+<p>
+  <button routerLink="/main">
+  <img [src]="mainlist[14].img" [alt]="mainlist[14].alt" style="max-width: 150px; width: 100%;">
+</button>
+</p>

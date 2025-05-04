@@ -1,0 +1,23 @@
+<div>
+  <h1>歡迎來到{{ mainlist[2].alt }}</h1>
+</div>
+<div>
+  <h2>累積存款：{{ Sum_of_bank() }}</h2>
+  <button routerLink="/main">
+    <img [src]="mainlist[14].img" [alt]="mainlist[14].alt" style="max-width: 50px; width: 100%;">
+  </button>
+  <span>&nbsp;&nbsp;&nbsp;</span>
+  <button (click)="Savebank()">修改</button>
+  <p></p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, 200px); gap: 0; width: 100%;">
+<div *ngFor="let item of sub2data">
+  <mat-form-field class="example-form-field" appearance="outline" style="max-width: 150px; width: 100%; ">
+    <mat-label>{{ item.bankname }}</mat-label>
+    <input matInput type="text" [(ngModel)]="item.bankvalue">
+    <button *ngIf="item.bankvalue" matSuffix mat-icon-button aria-label="Clear" (click)="item.bankvalue = ''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+</div>

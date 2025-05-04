@@ -1,0 +1,59 @@
+<div>
+  <h1>歡迎來到{{mainlist[9].alt}}</h1>
+  <table>
+    <tr>
+      <td><label for="subscribe">動畫追劇項目：</label></td>
+      <td><textarea rows="2" cols="50" [(ngModel)]="textareavalue1"></textarea></td>
+    </tr>
+    <tr>
+      <td><label for="subscribe">當前集數：</label></td>
+      <td><textarea rows="2" cols="50" [(ngModel)]="textareavalue2"></textarea></td>
+    </tr>
+    <tr>
+      <td><label for="subscribe">最近觀看日：</label></td>
+      <td><textarea rows="2" cols="50" [(ngModel)]="textareavalue3"></textarea></td>
+    </tr>
+    <tr>
+      <td><label for="remark">備註：</label></td>
+      <td><textarea rows="2" cols="50" [(ngModel)]="textareavalue4"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align: center;">
+        <button id="button1" (click)="onButton1Click()">新增資料</button>
+      </td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>動畫追劇</th>
+      <th>當前集數</th>
+      <th>最近觀看日</th>
+      <th>備註</th>
+    </tr>
+    <tr *ngFor="let data of sub9data">
+      <ng-container *ngIf="editTarget === data; else displayRow">
+        <td><textarea rows="2" cols="10" [(ngModel)]="data.textareavalue1"></textarea></td>
+        <td><textarea rows="2" cols="10" [(ngModel)]="data.textareavalue2"></textarea></td>
+        <td><textarea rows="2" cols="10" [(ngModel)]="data.textareavalue3"></textarea></td>
+        <td>
+          <button (click)="saveEdit(data)">儲存</button>
+          <button (click)="cancelEdit()">取消</button>
+          <textarea rows="2" cols="10" [(ngModel)]="data.textareavalue4"></textarea>
+        </td>
+      </ng-container>
+      <ng-template #displayRow>
+        <td>{{ data.textareavalue1 }}</td>
+        <td>{{ data.textareavalue2 }}</td>
+        <td>{{ data.textareavalue3 }}</td>
+        <td>
+          <button (click)="editRow(data)">修改</button>
+          <button (click)="onButton3Click(data)">刪除</button>
+          {{ data.textareavalue4 }}
+        </td>
+      </ng-template>
+    </tr>
+  </table>
+  <button routerLink="/main">
+    <img [src]="mainlist[14].img" [alt]="mainlist[14].alt" style="max-width: 150px; width: 100%;">
+  </button>
+</div>

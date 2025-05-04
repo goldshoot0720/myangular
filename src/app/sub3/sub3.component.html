@@ -1,0 +1,37 @@
+<div class="header-container">
+  <h1>歡迎來到{{mainlist[3].alt}}</h1>
+</div>
+
+<div class="section-title">
+  <h2>高考三級資訊處理榜首</h2>
+</div>
+
+<div *ngFor="let item of sub3data3">
+  <mat-card class="mat-elevation-z4">
+    <mat-card-header>
+      <mat-card-title>{{item.department}} {{item.count}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="section-title">
+  <h2>普考資訊處理榜首</h2>
+</div>
+
+<div *ngFor="let item of sub3data7">
+  <mat-card class="mat-elevation-z4">
+    <mat-card-header>
+      <mat-card-title>{{item.agency}} {{item.count}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="button-container">
+  <button routerLink="/main">
+    <img [src]="mainlist[14].img" [alt]="mainlist[14].alt" style="max-width: 150px; width: 100%;">
+  </button>
+</div>
