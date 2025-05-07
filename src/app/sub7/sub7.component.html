@@ -1,5 +1,17 @@
 <div><h1>歡迎來到{{mainlist[7].alt}}</h1></div>
+<div *ngIf="mybool1">
+  {{"true"}}
+</div>
+<div *ngif="mybool3">
+  {{"false"}}
+</div>
 <mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>紅鸞星動，06/15 </mat-card-title>
+    <mat-card-subtitle>倒數{{datediff0}}天，或{{week0}}週又{{day0}}天</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions>
+  </mat-card-actions>
   <mat-card-header>
     <mat-card-title>考試通知書，06/19 </mat-card-title>
     <mat-card-subtitle>倒數{{datediff1}}天，或{{week1}}週又{{day1}}天</mat-card-subtitle>
@@ -45,7 +57,7 @@
     <mat-card-subtitle>自動展延門號效期</mat-card-subtitle>
   </mat-card-header>
   <mat-card-actions>
-    {{data1}}之後，效期低於15天。
+    {{"2025-09-18"}}之後，效期低於15天。
   </mat-card-actions>
 </mat-card>
 <p>  <button routerLink="/main">
